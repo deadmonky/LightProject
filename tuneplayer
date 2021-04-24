@@ -27,6 +27,7 @@ void loop()
    while (ch != 0)
    {
       //이 부분을 채우세요.
+      //공백이면 75초 딜레이, 문자면 playNote 실행
    }
    
    delay(5000);
