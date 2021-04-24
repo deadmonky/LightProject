@@ -26,16 +26,7 @@ void loop()
    char ch = song[0];
    while (ch != 0)
    {
-      if (ch == ' ')
-      {
-         delay(75);
-      }
-      else if (ch >= 'a' and ch <= 'g')
-      {
-         playNote(toneDuration[ch - 'a']);
-      }
-      i++;
-      ch = song[i];
+
    }
    
    delay(5000);
