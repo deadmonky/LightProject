@@ -26,7 +26,7 @@ void loop()
    char ch = song[0];
    while (ch != 0)
    {
-
+      //이 부분을 채우세요.
    }
    
    delay(5000);
