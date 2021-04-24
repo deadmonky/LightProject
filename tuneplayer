@@ -10,13 +10,13 @@ char* song = "e e ee e e ee e g c d eeee f f f f f e e e e d d e dd gg e e ee e 
 void setup()
 {
    //PWM 주사율을 63kHz로 변경
-   cli();  // 비트설정을 위해 간섭비활성화
+   cli();  // 비트설정을 위해 인터럽트 비활성화
    bitSet(TCCR2A, WGM20);
    bitSet(TCCR2A, WGM21); // 타이머를 fast PWM 모드로 설정
    bitClear(TCCR2B, CS20);
    bitClear(TCCR2B, CS21); 
    bitClear(TCCR2B, CS22);
-   sei();     // 설정이 끝나 간섭활성화
+   sei();     // 설정이 끝나 인터럽트 활성화
    pinMode(soundPin, OUTPUT);
 }   
 
