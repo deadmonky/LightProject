@@ -26,8 +26,16 @@ void loop()
    char ch = song[0];
    while (ch != 0)
    {
-      //이 부분을 채우세요.
-      //공백이면 75초 딜레이, 문자면 playNote 실행
+      if (ch == ' ')
+      {
+         delay(75);
+      }
+      else if (ch >= 'a' and ch <= 'g')
+      {
+         playNote(toneDuration[ch - 'a']);
+      }
+      i++;
+      ch = song[i];
    }
    
    delay(5000);
