@@ -4,7 +4,7 @@ byte sine[] = {0, 22, 44, 64, 82, 98, 111, 120, 126, 127,
 -98, -111, -120, -126, -128, -126, -120 -111, -98, -82,
 -64, -44, -22};
 
-int toneDuration[] = {132 ,120, 105, 98, 89, 78, 74, 62};
+int toneDuration[] = {120, 105, 98, 89, 78, 74, 62};
 
 char* song = "e e ee e e ee e g c d eeee f f f f f e e e e d d e dd gg e e ee e e ee e g c d eeee f f f f f e e e g g f d cccc";
 void setup()
