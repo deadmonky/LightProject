@@ -9,7 +9,7 @@ byte sine[] = {0, 22, 44, 64, 82, 98, 111, 120, 126, 127,
 -98, -111, -120, -126, -120, -111, -98, -82,
 -64, -44, -22};
 
-long lasttCheckTime = millis();
+long lastCheckTime = millis();
 int pitchDelay;
 int volume;
 
@@ -31,11 +31,11 @@ void loop()
    long now = millis();
    if ( now > lastCheckTime + 20L)
    {
-      pitchDelay = map(analogRead(pitchInPin), ldrDim, ldrBright, 10, 30);
+      pitchDelay = map(analogRead(pitchInputPin), ldrDim, ldrBright, 10, 30);
       volume = map(analogRead(volumeInputPin), ldrDim, ldrBright, 1, 4);
       lastCheckTime = now;
    }
-    playSine(pitchDelay);
+    playSine(pitchDelay, volume);
 }
 
 void playSine(int period, int volume)
