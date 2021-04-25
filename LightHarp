@@ -30,12 +30,12 @@ void loop()
 {
    long now = millis();
    if ( now > lastCheckTime + 20L)
-   {
-      pitchDelay = map(analogRead(pitchInputPin), ldrDim, ldrBright, 10, 30);
-      volume = map(analogRead(volumeInputPin), ldrDim, ldrBright, 1, 4);
+   {                                      //pitchDelay는 10~30, volume은 1~4로 매핑
+      pitchDelay = map(analogRead(        ),        ,        ,        ,        );
+      volume = map(analogRead(         ),        ,        ,        ,        );
       lastCheckTime = now;
    }
-    playSine(pitchDelay, volume);
+   playSine(pitchDelay, volume);
 }
 
 void playSine(int period, int volume)
